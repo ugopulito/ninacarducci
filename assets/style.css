@@ -244,6 +244,11 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
+:target{
+	scroll-margin-top: 100px;
+	scroll-behavior: smooth;
+}
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
