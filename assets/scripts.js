@@ -12,4 +12,8 @@ $(document).ready(function() {
         showTags: true,
         tagsPosition: 'top'
     });
+    //Scroll to top
+    $('.name').on('click', () => {
+        scrollTo(0,0);
+    })
 });

@@ -20,6 +20,7 @@ header {
 
 header .name {
 	font-size: 26px;
+	cursor: pointer;
 }
 
 nav ul {
@@ -40,6 +41,11 @@ nav a {
 
 .social-link img {
 	width: 20px;
+	aspect-ratio: 1/1;
+}
+
+.carousel-item img {
+    aspect-ratio: 24/11;
 }
 
 #about {
@@ -69,7 +75,7 @@ nav a {
 
 .picture img {
 	width: 100%;
-
+	aspect-ratio: 1/1;
 }
 #about-me {
 	flex: 2
