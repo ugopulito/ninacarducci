@@ -45,7 +45,8 @@ nav a {
 }
 
 .carousel-item img {
-    aspect-ratio: 24/11;
+	max-width: 1920px;
+    aspect-ratio: 1920/880;
 }
 
 #about {
@@ -107,10 +108,14 @@ nav a {
 .gallery .nav {
 	justify-content: center;
 }
+.nav-item{
+	cursor: pointer;
+}
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #7B7332;
 	border-radius:0 ;
+	font-weight: 600;
 }
 .nav-pills .nav-link {
 	color: #000
