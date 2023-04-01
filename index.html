@@ -8,16 +8,17 @@
 		<link rel="preconnect" href="https://code.jquery.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="preload" as="image" href="./assets/tiny-images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
-		<link rel="preload" as="script" href="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
 		<link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" onload="this.rel='stylesheet'">
 		<link rel="preload" as="style" href="./assets/bootstrap/bootstrap.css" onload="this.rel='stylesheet'">
 		<link rel="preload" as="script" href="./assets/bootstrap/bootstrap.bundle.js">
 		<link rel="preload" as="style" href="./assets/css/min/style.css" onload="this.rel='stylesheet'">
+		<!-- <link rel="preload" as="style" href="./assets/css/style.css" onload="this.rel='stylesheet'"> -->
 		<meta charset="UTF-8">
 		<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-		<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-		<script src="./assets/js/min/maugallery.js"></script>
-		<script src="./assets/js/min/script.js"></script>
+		<!-- <script src="./assets/js/scripts.js"></script> -->
+		<!-- <script src="./assets/js/gallery.js"></script> -->
+		<script src="./assets/js/min/scripts.js"></script>
+		<script src="./assets/js/min/gallery.js"></script>
 	</head>
 	<body>
 		<header>
@@ -74,7 +75,10 @@
 		<section id="gallery">
 			<h2 class="title">Portfolio</h2>
 			<div class="container py-3">
-				<div class="gallery" style="display: none">
+				<ul class="filters">
+					<li class="nav-link active">Tous</li>
+				</ul>
+				<div class="gallery">
 					<img data-gallery-tag="Concert" class="gallery-item" src="./assets/tiny-images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Plan large d'une scène de concert pris depuis la foule"/>
 					<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/tiny-images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Portrait américain d'un homme en costume souriant"/>
 					<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/tiny-images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Femme de 3/4 face qui rit"/>
