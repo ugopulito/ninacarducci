@@ -390,6 +390,11 @@ input[type="submit"] {
 		z-index: -1;
 	}
 }
+@media all and (max-width: 767px) {
+	.gallery-item{
+		width: 50%;
+	}
+}
 
 @media all and (max-width: 650px) {
 	header {
@@ -423,6 +428,9 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 80%;
+	}
+	.gallery-item{
+		width: 100%;
 	}
 }
 
