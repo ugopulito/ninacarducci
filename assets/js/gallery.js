@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded',function() {
         let filters = document.querySelectorAll('.nav-link');
         for (const f of filters) {
             f.addEventListener('click', (e) => {
+                items = Array.from(document.querySelectorAll('.gallery-item'));
                 //Remove active class on old filter
                 for (const f of filters) {
                     if(f.classList.contains('active')){
@@ -30,6 +31,16 @@ document.addEventListener('DOMContentLoaded',function() {
                 //Set new filter
                 e.target.classList.add('active');
                 activeFilter = e.target.innerText;
+                //hide items
+                for (const i of items) {
+                    i.removeAttribute('style');
+                    if(activeFilter === 'Tous'){
+                        i.removeAttribute('style');
+                    }
+                    else if(i.dataset.galleryTag != activeFilter){
+                        i.style.display = 'none'
+                    }
+                }
                 //Filter gallery items
                 let filteredItems = [];
                 for (const i of items) {
@@ -40,8 +51,7 @@ document.addEventListener('DOMContentLoaded',function() {
                         filteredItems.push(i);
                     }
                 }
-                console.log(items);
-                console.log(filteredItems);
+                items = filteredItems;
             })
         }
     }
@@ -56,7 +66,10 @@ document.addEventListener('DOMContentLoaded',function() {
     };
     
     const initModale = (e) => {
-        document.querySelector('body').style.overflow = 'hidden';
+        let body = document.querySelector('body')
+        body.style.overflow = 'hidden';
+        body.style.paddingRight = '17px';
+        body.style.paddingTop = '15px';
         //init modale container
         let modale = document.createElement('div');
         modale.classList.add('modale');
@@ -72,24 +85,9 @@ document.addEventListener('DOMContentLoaded',function() {
         })
         modale.addEventListener('click', () => {
             modale.remove();
-            document.querySelector('body').removeAttribute('style');
+            body.removeAttribute('style');
         })
         //modale navigation
-        let rightChevron = document.createElement('div');
-        rightChevron.classList.add('chevron', 'next')
-        rightChevron.innerText = '>';
-        modale.append(rightChevron);
-        rightChevron.addEventListener('click', (event) => {
-            event.stopImmediatePropagation();        
-            if(currentIndex<items.length-1)
-            {
-                currentIndex++;
-            }
-            else{
-                currentIndex = 0;
-            }
-            preview.setAttribute('src', e[currentIndex].src);
-        });
         let leftChevron = document.createElement('div');
         leftChevron.classList.add('chevron', 'previous')
         leftChevron.innerText = '<';
@@ -104,7 +102,22 @@ document.addEventListener('DOMContentLoaded',function() {
             }
             preview.setAttribute('src', e[currentIndex].src);
         })
-        
+
+        let rightChevron = document.createElement('div');
+        rightChevron.classList.add('chevron', 'next')
+        rightChevron.innerText = '>';
+        modale.append(rightChevron);
+        rightChevron.addEventListener('click', (event) => {
+            event.stopImmediatePropagation();        
+            if(currentIndex<items.length-1)
+            {
+                currentIndex++;
+            }
+            else{
+                currentIndex = 0;
+            }
+            preview.setAttribute('src', e[currentIndex].src);
+        });        
     }
     
     
