@@ -7,7 +7,6 @@
 		<title>Nina Carducci - Photographe</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="preload" as="image" href="./assets/tiny-images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
 		<link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" onload="this.rel='stylesheet'">
 		<link rel="preload" as="style" href="./assets/bootstrap/bootstrap.css" onload="this.rel='stylesheet'">
 		<link rel="preload" as="style" href="./assets/css/min/style.css" onload="this.rel='stylesheet'">
@@ -45,15 +44,16 @@
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 				</div>
 				<div class="carousel-inner">
-					<div class="carousel-item active">
+					<picture class="carousel-item active">
+						<source media="(max-width: 650px)" srcset="./assets/tiny-images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-small.webp" />
 						<img src="./assets/tiny-images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="Un homme en costume traversant un passage piéton">
-					</div>
-					<div class="carousel-item">
+					</picture>
+					<picture class="carousel-item">
 						<img src="./assets/tiny-images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="Les spectateurs d'un évènement vus de face">
-					</div>
-					<div class="carousel-item">
+					</picture>
+					<picture class="carousel-item">
 						<img src="./assets/tiny-images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Un couple de mariés qui s'embrassent, applaudis par les invités">
-					</div>
+					</picture>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
