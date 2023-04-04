@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded',function() {
         let preview = document.createElement('img');
         preview.classList.add('preview');
         preview.setAttribute('src', e[currentIndex].src);
+        preview.setAttribute('alt', e[currentIndex].alt);
         //Freeze body on modale opening
         let body = document.querySelector('body')
         body.style.overflow = 'hidden';
