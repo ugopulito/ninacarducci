@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 currentIndex = items.length-1;
             }
             preview.setAttribute('src', e[currentIndex].src);
+            preview.setAttribute('alt', e[currentIndex].alt);
         })
 
         let rightChevron = document.createElement('div');
@@ -123,6 +124,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 currentIndex = 0;
             }
             preview.setAttribute('src', e[currentIndex].src);
+            preview.setAttribute('alt', e[currentIndex].alt);
         });        
     }
     
