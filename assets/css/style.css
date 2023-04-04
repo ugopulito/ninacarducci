@@ -44,6 +44,11 @@ nav a {
 	aspect-ratio: 1/1;
 }
 
+.icon{
+	width: 22px;
+	opacity: 0.5;
+}
+
 .carousel-item img {
 	max-width: 1920px;
     aspect-ratio: 1920/888;
